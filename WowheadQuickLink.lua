@@ -1,16 +1,36 @@
 local addonName, nameSpace = ...
+local localePathByLocale = {
+    deDE = "de/",
+    esES = "es/",
+    esMX = "mx/",
+    frFR = "fr/",
+    itIT = "it/",
+    koKR = "ko/",
+    ptBR = "pt/",
+    ruRU = "ru/",
+    zhCN = "cn/",
+    zhTW = "tw/",
+}
+local function GetWowheadLocalePath()
+    local locale = GetLocale and GetLocale()
+    if locale and localePathByLocale[locale] then
+        return localePathByLocale[locale]
+    end
+    return ""
+end
+nameSpace.localePath = GetWowheadLocalePath()
 if IsRetail() then
-    nameSpace.baseWowheadUrl = "https://%swowhead.com/%s=%s%s"
+    nameSpace.baseWowheadUrl = "https://%swowhead.com/%s%s=%s%s"
 end
 if IsClassic() then
-    nameSpace.baseWowheadUrl = "https://%swowhead.com/classic/%s=%s%s"
+    nameSpace.baseWowheadUrl = "https://%swowhead.com/classic/%s%s=%s%s"
 end
 if IsMop() then
-    nameSpace.baseWowheadUrl = "https://%swowhead.com/mop-classic/%s=%s%s"
+    nameSpace.baseWowheadUrl = "https://%swowhead.com/mop-classic/%s%s=%s%s"
 end
 
-nameSpace.baseWowheadAzEsUrl = "https://%swowhead.com/azerite-essence/%s%s"
-nameSpace.baseWowheadTradingPostActivityUrl = "https://%swowhead.com/trading-post-activity/%s%s"
+nameSpace.baseWowheadAzEsUrl = "https://%swowhead.com/azerite-essence/%s%s%s"
+nameSpace.baseWowheadTradingPostActivityUrl = "https://%swowhead.com/trading-post-activity/%s%s%s"
 nameSpace.baseArmoryUrl = "https://worldofwarcraft.com/%s/character/%s/%s"
 nameSpace.baseRaiderIoUrl = "https://raider.io/characters/%s/%s/%s"
 

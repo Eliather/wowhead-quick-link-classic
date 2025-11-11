@@ -62,7 +62,7 @@ local function Hide()
 end
 
 local function SetUrl()
-    WowheadQuickLinkConfig_FinalUrlText:SetText(string.format(nameSpace.baseWowheadUrl, WowheadQuickLinkCfg.prefix, "<type>", "<id>", WowheadQuickLinkCfg.suffix))
+    WowheadQuickLinkConfig_FinalUrlText:SetText(string.format(nameSpace.baseWowheadUrl, WowheadQuickLinkCfg.prefix, nameSpace.localePath, "<type>", "<id>", WowheadQuickLinkCfg.suffix))
 end
 
 

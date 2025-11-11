@@ -28,7 +28,7 @@ function nameSpace.strategies.GetWowheadUrl(dataSources)
                 typeStr = type:sub(1, 1):upper() .. type:sub(2)
             end
             return "Wowhead " .. typeStr,
-                string.format(nameSpace.baseWowheadUrl, WowheadQuickLinkCfg.prefix, type, id, WowheadQuickLinkCfg.suffix)
+                string.format(nameSpace.baseWowheadUrl, WowheadQuickLinkCfg.prefix, nameSpace.localePath, type, id, WowheadQuickLinkCfg.suffix)
         end
     end
 end
@@ -39,7 +39,7 @@ function nameSpace.strategies.GetWowheadAzEsUrl(dataSources)
         local id = strategy(dataSources)
         if id then
             return "Wowhead Azerite Essence",
-                string.format(nameSpace.baseWowheadAzEsUrl, WowheadQuickLinkCfg.prefix, id, WowheadQuickLinkCfg.suffix)
+                string.format(nameSpace.baseWowheadAzEsUrl, WowheadQuickLinkCfg.prefix, nameSpace.localePath, id, WowheadQuickLinkCfg.suffix)
         end
     end
 end
@@ -49,7 +49,7 @@ function nameSpace.strategies.GetWowheadTradingPostActivityUrl(dataSources)
         local id = strategy(dataSources)
         if id then
             return "Wowhead Trading Post Activity",
-                string.format(nameSpace.baseWowheadTradingPostActivityUrl, WowheadQuickLinkCfg.prefix, id, WowheadQuickLinkCfg.suffix)
+                string.format(nameSpace.baseWowheadTradingPostActivityUrl, WowheadQuickLinkCfg.prefix, nameSpace.localePath, id, WowheadQuickLinkCfg.suffix)
         end
     end
 end
