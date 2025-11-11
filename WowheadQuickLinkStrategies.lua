@@ -481,8 +481,10 @@ function strategies.wowheadTradingPostActivity.GetTradingPostActivityFromTracker
 end
 
 function CheckFrameName(name, data)
-    if not name or not data.focus or not data.focus.GetName or not data.focus:GetName() then return false end
-    return string.find(data.focus:GetName(), name)
+    if not name or not data.focus or not data.focus.GetName then return false end
+    local focusName = data.focus:GetName()
+    if not focusName then return false end
+    return string.find(focusName, name)
 end
 
 local function HookTooltip(tooltip)
