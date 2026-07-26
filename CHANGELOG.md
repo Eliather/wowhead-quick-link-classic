@@ -3,7 +3,7 @@
 This is a fork of the original Wowhead Quick Link addon, maintained by Eliather.
 Repository: [https://github.com/Eliather/wowhead-quick-link-classic](https://github.com/Eliather/wowhead-quick-link-classic)
 
-## [3.0.0]
+## [3.0.1]
 - Updated TOC for WoW Classic Era 1.15.9.
 - Major rewrite and code cleanup: Completely removed Retail, Mists, and other unnecessary expansion code.
 - Addon is now 100% exclusive to Classic Era and highly optimized.

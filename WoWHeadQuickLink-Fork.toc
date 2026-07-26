@@ -1,5 +1,5 @@
 ## Interface: 11509
-## Version: 3.0.0
+## Version: 3.0.1
 ## Title: WoWHeadQuickLink-Fork
 ## Notes: Mouse over and press CTRL-C on (almost) anything to generate a Wowhead link.
 ## Author: Blur
