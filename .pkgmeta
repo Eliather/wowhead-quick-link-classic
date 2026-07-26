@@ -1,0 +1,4 @@
+package-as: WoWHeadQuickLink-Fork
+ignore:
+  - .git
+  - .gitignore
